@@ -3,9 +3,16 @@ import { Bricolage_Grotesque } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "next-themes";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Metadata } from "next";
 
-const inter = Bricolage_Grotesque({ subsets: ["latin"] });
+const bric = Bricolage_Grotesque({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: "AI Twitter Bio Generator",
+  description:
+    "Generate your perfect Twitter bio with the help of AI. Just answer a few questions and let our AI craft a bio that truly represents you",
+  metadataBase: new URL("https://twitter-ai-bio.vercel.app"),
+};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -15,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          inter.className,
+          bric.className,
           "min-h-svh relative h-full w-full bg-background"
         )}
       >

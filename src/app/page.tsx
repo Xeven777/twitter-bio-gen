@@ -4,14 +4,7 @@ import UserInput from "@/components/home/UserInput";
 import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
 import { BioProvider } from "@/context/BioContext";
 import { ChevronRight, Star } from "lucide-react";
-import { Metadata } from "next";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "AI Twitter Bio Generator",
-  description:
-    "Generate your perfect Twitter bio with the help of AI. Just answer a few questions and let our AI craft a bio that truly represents you.",
-};
 
 export default function Home() {
   return (
