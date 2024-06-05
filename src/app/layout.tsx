@@ -1,9 +1,9 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Bricolage_Grotesque({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,

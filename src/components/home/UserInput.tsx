@@ -30,6 +30,7 @@ import { Switch } from "../ui/switch";
 import { generateBio } from "@/app/actions";
 import { BioContext } from "@/context/BioContext";
 import GemmaIcon from "../icons/Gemma";
+import { Confetti } from "../magicui/confetti";
 
 const formSchema = z.object({
   model: z.string().min(1, "Model is required!"),
@@ -39,7 +40,7 @@ const formSchema = z.object({
     .max(2, "Temperature must be at most 1"),
   content: z
     .string()
-    .min(50, "Content should atlest have 50 characters.")
+    .min(40, "Content should atlest have 40 characters.")
     .max(500, "Content should not exceed 500 character limit."),
   type: z.enum(["personal", "brand"], {
     errorMap: () => ({ message: "Type is required!" }),
@@ -92,6 +93,7 @@ const UserInput = () => {
       );
       setOutput(data);
       setLoading(false);
+      Confetti({});
     } catch (e) {
       console.log(e);
       setLoading(false);

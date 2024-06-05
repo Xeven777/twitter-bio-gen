@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
-  darkMode:"class",
+  darkMode: "class",
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -18,12 +18,9 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ['var(--font-geist-sans)'],
-      },
-      screens:{
+      screens: {
         xs: "380px",
-        slg: "840px"
+        slg: "840px",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -66,7 +63,7 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "gradient": {
+        gradient: {
           to: {
             backgroundPosition: "var(--bg-size) 0",
           },
@@ -87,12 +84,13 @@ const config = {
       },
       animation: {
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        gradient: "gradient 8s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
