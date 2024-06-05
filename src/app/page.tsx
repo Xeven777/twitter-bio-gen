@@ -1,4 +1,5 @@
 import Output from "@/components/home/Output";
+import ThemeTogglebutton from "@/components/home/ThemeChanger";
 import UserInput from "@/components/home/UserInput";
 import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
 import { BioProvider } from "@/context/BioContext";
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="relative grid  grid-cols-1 slg:grid-cols-2 gap-12  px-4 py-12 sm:py-16 sm:px-8 md:px-10 slg:p-16 lg:p-24">
+      <ThemeTogglebutton />
       <div className="col-span-full group w-full flex flex-col items-center justify-center space-y-2 sm:space-y-4 mb-4 text-center">
         <Link
           href="https://x.com/xevenbiswas"
